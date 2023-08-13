@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #DCD9D4;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+    background-blend-mode: soft-light,screen;
+    font-family: 'PT Sans', sans-serif;
+}
+
+header {
+    color: black;
+    text-align: center;
+    padding: 1em;
+}
+
+/*----- BODY y TARJETAS ------*/
+.introduccion {
+    background-color: #fff;
+    padding: 2em;
+    margin: 2em;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-self: center;
+}
+
+.introduccion-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.veterinarias-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 1em;
+    
+}
+
+.veterinaria {
+    grid-template-columns: 8px auto 8px;
+    grid-template-rows: 8px auto 12px;  
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin-bottom: 3em;
+    margin-left: 1.5em;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;  
+}
+
+.veterinaria-fix {
+    grid-template-columns: 8px auto 8px;
+    grid-template-rows: 8px auto 12px;  
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin-bottom: 4em;
+    margin-left: 1.5em;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;  
+}
+
+.veterinaria:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 4px 6px rgb(255, 145, 2);
+}
+
+.veterinaria-zoonosis{
+    grid-template-columns: 8px auto 8px;
+    grid-template-rows: 8px auto 12px;  
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin-bottom: 3em;
+    margin-left: 1.5em;
+    border-radius: 10px;
+    background-color: #7788;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;  
+}
+
+.veterinaria-zoonosis:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 4px 6px rgb(255, 145, 2);
+}
+
+.maps{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.domicilio{
+    font-weight: bold;
+}
+
+.telefono{
+    font-weight: bold;
+}
+
+.facebook{
+    margin-left: 30%;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ------ BARRA NAV ------*/
+.navbar {
+
+    padding: 1em;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar li {
+    margin-right: 1em;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f39c12;
+}
+
+/*------ FOOTER ------*/
+footer {
+    background-color: #222;
+    color: white;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0.5em 0;
+}
