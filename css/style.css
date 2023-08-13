@@ -16,7 +16,7 @@ header {
 
 /*----- BODY y TARJETAS ------*/
 .introduccion {
-    background-color: #fff;
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
     padding: 2em;
     margin: 2em;
     border-radius: 5px;
@@ -50,7 +50,9 @@ header {
     margin-bottom: 3em;
     margin-left: 1.5em;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #CDDCDC;
+    background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+    background-blend-mode: screen, overlay;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;  
 }
@@ -63,12 +65,19 @@ header {
     margin-bottom: 4em;
     margin-left: 1.5em;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #CDDCDC;
+    background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+    background-blend-mode: screen, overlay;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;  
 }
 
 .veterinaria:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 4px 6px rgb(255, 145, 2);
+}
+
+.veterinaria-fix:hover{
     transform: translateY(-10px);
     box-shadow: 0 4px 6px rgb(255, 145, 2);
 }
@@ -81,19 +90,20 @@ header {
     margin-bottom: 3em;
     margin-left: 1.5em;
     border-radius: 10px;
-    background-color: #7788;
+    background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;  
 }
 
 .veterinaria-zoonosis:hover{
     transform: translateY(-10px);
-    box-shadow: 0 4px 6px rgb(255, 145, 2);
+    box-shadow: 0 4px 6px rgb(0,0,0,1);
 }
 
 .maps{
     font-weight: bold;
     text-decoration: none;
+    color: #0408d3;
 }
 
 .domicilio{
@@ -105,14 +115,22 @@ header {
 }
 
 .facebook{
-    margin-left: 30%;
     font-weight: bold;
     text-decoration: none;
+    color: #0408d3;
+}
+
+/*Para posicionar los link de las tarjetas a cada lado*/
+.izq{
+    float: left;
+}
+
+.der{
+    float: right;
 }
 
 /* ------ BARRA NAV ------*/
 .navbar {
-
     padding: 1em;
 }
 
@@ -139,6 +157,19 @@ header {
     color: #f39c12;
 }
 
+.navbar-logo{
+    display: inline-block;
+    vertical-align: middle;
+    width: 500px;
+    margin-bottom: -3em;
+  }
+
+.navbar-logo img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 /*------ FOOTER ------*/
 footer {
     background-color: #222;
@@ -153,5 +184,26 @@ footer {
 }
 
 .footer-content p {
-    margin: 0.5em 0;
+    margin: 0.5em;
+}
+
+.mailto{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+}
+
+.mailto:hover{
+    color: #f39c12;
+}
+
+.marca{
+    float: right;
+    padding-right: 1em;
+    font-weight: bold;
+    font-size: small;
+}
+
+.marca:hover{
+    color: #f39c12;
 }
