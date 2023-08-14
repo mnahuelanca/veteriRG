@@ -23,6 +23,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     align-self: center;
+    width: 80%;
 }
 
 .introduccion-container{
@@ -181,6 +182,26 @@ header {
     display: block;
     width: 100%;
     height: auto;
+}
+
+/*------- FILTRO ------*/
+.filtro {
+    margin: 1em;
+}
+
+.filtro label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    
+}
+
+.filtro input {
+    width: 30%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
 }
 
 /*------ FOOTER ------*/
