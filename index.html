@@ -18,11 +18,11 @@
         </nav>
     </header>
     <main>
-        <div class="introduccion-container">
+        <div class="introduccion-container" href="#inicio">
             <div class="introduccion"> <!--MODIFICAR ESTE TEXTO-->
-                <h1>Centros veterinarios en Rio Grande</h1>
+                <h1>Centros veterinarios en Río Grande</h1>
                 <p>Este proyecto tiene como objetivo ayudar a las personas a encontrar veterinarias confiables y cercanas para el cuidado de sus mascotas.</p>
-                <p>En esta página, encontrarás una lista de algunas de las mejores veterinarias en nuestra ciudad, junto con su información de contacto y ubicación.</p>
+                <p>En esta página, encontrarás todos los centros veterinarios en nuestra Ciudad, junto con su información de contacto y ubicación.</p>
                 <p>Esperamos que esta herramienta sea útil para ti y tus queridas mascotas. Si tienes alguna sugerencia o comentario, no dudes en contactarnos.</p>
                 <div class="filtro">
                     <label for="filtro-nombre">Filtrar por nombre:</label>
@@ -213,17 +213,48 @@
                 </div>
             </div>
         </div>
-    </main>
+    
+        <!-- <section class="testimonios">
+            <h2>Comentarios y Testimonios</h2>
+            <div class="testimonio-formulario">
+                <h3>Envía tu Testimonio</h3>
+                <button id="mostrar-formulario">Enviar Testimonio</button>
+                <form id="formulario-testimonio" class="oculto">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+        
+                    <label for="veterinaria">Veterinaria:</label>
+                    <input type="text" id="veterinaria" name="veterinaria" required>
+        
+                    <label for="testimonio">Testimonio:</label>
+                    <textarea id="testimonio" name="testimonio" required></textarea>
+        
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+             Agrega los testimonios existentes aquí 
+        </section>-->
+        
+        
+
 
     <section class="veterinaria-turno">
-        <h2>Veterinaria de Turno</h2>
+        <h2>Proximamente... 🙏 Veterinaria de Turno</h2>
         <div class="veterinaria-turno-info">
             <h3>Nombre de la Veterinaria</h3>
-            <p>Dirección: Domicilio de la Veterinaria</p>
-            <p>Teléfono: Teléfono de la Veterinaria</p>
+            <p><span class="domicilio"> Dirección: </span> ... </p>
+            <p><span class="telefono">Teléfono: </span> ... </p>
+            <p><span class="telefono">Atencion: </span> ...</p>
+                <div>
+                    <a href="#" target="_blank" class="maps">¿Cómo llegar?</a>
+                </div>
+                <br>
+                <div>
+                    <a href="#" target="_blank" class="facebook">Facebook</a>
+                </div>
         </div>
     </section>
-    
+</main>
 
     <footer>
         <div class="footer-content">
@@ -232,7 +263,11 @@
         </div>
         <span class="marca">Hecho por M&M 🧡</span>
     </footer>
+
+
     <script src="/js/filter.js"></script>
+    <!-- <script src="/js/comentarios.js"></script> -->
+
 </body>
 </html>
 

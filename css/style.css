@@ -19,7 +19,7 @@ header {
     background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
     padding: 2em;
     margin: 2em;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     align-self: center;
@@ -96,7 +96,7 @@ header {
     margin-bottom: 3em;
     margin-left: 1.5em;
     border-radius: 10px;
-    background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+    background-color: #96C2FE;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;  
 }
@@ -134,6 +134,21 @@ header {
     color: black;
 }
 
+/*LOGO MEDIA QUERY*/
+@media screen and (max-width: 768px) {
+    .navbar-logo {
+        justify-content: center;
+        margin-bottom: 1em;
+        margin-left: 4em;
+    }
+
+    .navbar-logo img {
+        max-width: 60%;
+    }
+}
+
+
+
 /*Para posicionar los link de las tarjetas a cada lado*/
 .izq{
     float: left;
@@ -158,21 +173,22 @@ header {
     text-align: center;
 }
 
-.veterinaria-turno-info{ /*AJUSTAR A LA MITAD*/
+.veterinaria-turno-info{ 
     grid-template-columns: 8px auto 8px;
-    grid-template-rows: 8px auto 12px;  
+    grid-template-rows: 8px auto 12px; 
     border: 1px solid #ccc;
     padding: 1em;
-    margin-bottom: 3em;
-    margin-left: 1.5em;
+    margin-bottom: 1.5%;
+    margin-left: 1.5%;
     border-radius: 10px;
-    background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-
+    background-color: #F35C4B;
+    align-items: center;
+    text-align: center;
 }
 
-
+.der-fix{
+    text-align: right;
+}
 
 /* ------ BARRA NAV ------*/
 .navbar {
@@ -205,14 +221,12 @@ header {
 .navbar-logo{
     display: inline-block;
     vertical-align: middle;
-    width: 500px;
     margin-bottom: -3em;
   }
 
 .navbar-logo img{
-    display: block;
-    width: 100%;
-    height: auto;
+    display: inline-block;
+    margin-right: 70px;
 }
 
 
@@ -274,3 +288,60 @@ footer {
 .marca:hover{
     color: #f39c12;
 }
+
+/*
+Estilos para el formulario de Testimonio 
+.testimonio-formulario h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+#mostrar-formulario {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#formulario-testimonio {
+    display: none;
+    margin-top: 1em;
+}
+
+/* Mostrar el formulario al aplicar la clase .mostrar 
+#formulario-testimonio.mostrar {
+    display: block;
+}
+
+
+/* Estilos para la sección de Testimonios 
+.testimonios {
+    padding: 2em;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.testimonios h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.testimonio {
+    background-color: #CDDCDC;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonio-texto {
+    font-style: italic;
+    margin-bottom: 0.5em;
+}
+
+.testimonio-autor {
+    font-weight: bold;
+}
+*/
