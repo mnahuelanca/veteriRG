@@ -6,6 +6,7 @@ body {
     background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
     background-blend-mode: soft-light,screen;
     font-family: 'PT Sans', sans-serif;
+    max-width: 100%;
 }
 
 header {
@@ -134,19 +135,6 @@ header {
     color: black;
 }
 
-/*LOGO MEDIA QUERY*/
-@media screen and (max-width: 768px) {
-    .navbar-logo {
-        justify-content: center;
-        margin-bottom: 1em;
-        margin-left: 4em;
-    }
-
-    .navbar-logo img {
-        max-width: 60%;
-    }
-}
-
 
 
 /*Para posicionar los link de las tarjetas a cada lado*/
@@ -165,26 +153,42 @@ header {
     padding: 1em;
     margin-top: 2em;
     border-top: 1px solid #ccc;
+    text-align: center; /* Centrar el contenido horizontalmente */
 }
 
 .veterinaria-turno h2 {
     font-size: 1.5em;
     margin-bottom: 0.5em;
-    text-align: center;
 }
 
-.veterinaria-turno-info{ 
-    grid-template-columns: 8px auto 8px;
-    grid-template-rows: 8px auto 12px; 
+.veterinaria-turno-info { 
     border: 1px solid #ccc;
     padding: 1em;
     margin-bottom: 1.5%;
-    margin-left: 1.5%;
     border-radius: 10px;
     background-color: #F35C4B;
-    align-items: center;
-    text-align: center;
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    text-align: left; /* Alinear el contenido a la izquierda */
+
+    /* Añadir un tamaño máximo y centrar horizontalmente */
+    max-width: 100%; /* Ajusta según necesites */
+    margin-left: auto;
+    margin-right: auto;
 }
+
+/* Estilos para los enlaces de mapa y Facebook */
+.veterinaria-turno-info a {
+    display: block;
+    margin-top: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0408d3;
+}
+
+.veterinaria-turno-info a:hover {
+    color: black;
+}
+
 
 .der-fix{
     text-align: right;
@@ -288,6 +292,87 @@ footer {
 .marca:hover{
     color: #f39c12;
 }
+
+/* Media Query para dispositivos pequeños (como teléfonos) */
+@media screen and (max-width: 480px) {
+    /* Agrega aquí tus ajustes de estilo para pantallas pequeñas */
+    .introduccion {
+        width: 90%; /* Ejemplo de ajuste en el ancho */
+    }
+    
+    .veterinaria, .veterinaria-fix {
+        width: 90%; /* Ejemplo de ajuste en el ancho */
+        margin-left: 5%; /* Centrar horizontalmente */
+        margin-right: 5%; /* Centrar horizontalmente */
+    }
+
+    /* Otros ajustes para pantallas pequeñas */
+}
+
+/* Media Query para tabletas y pantallas medianas */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    /* Agrega aquí tus ajustes de estilo para tabletas y pantallas medianas */
+    .introduccion {
+        width: 70%; /* Ejemplo de ajuste en el ancho */
+    }
+    
+    .veterinaria, .veterinaria-fix {
+        width: 45%; /* Ejemplo de ajuste en el ancho */
+        margin-left: 2.5%; /* Centrar horizontalmente */
+        margin-right: 2.5%; /* Centrar horizontalmente */
+    }
+
+    /* Otros ajustes para tabletas y pantallas medianas */
+}
+
+
+/* Media Query para dispositivos pequeños (como teléfonos) */
+@media screen and (max-width: 480px) {
+    /* Ajustes para el logo en pantallas pequeñas */
+    .navbar-logo {
+        text-align: center; /* Centrar el contenido horizontalmente */
+        margin-bottom: 1em;
+    }
+
+    .navbar-logo img {
+        max-width: 70%; /* Ajusta el tamaño del logo */
+        display: block;
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+
+    /* Ajustes para el filtro por nombre en pantallas pequeñas */
+    .filtro input {
+        width: 100%; /* Ancho completo para el filtro */
+    }
+}
+
+/* Media Query para tabletas y pantallas medianas */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    /* Ajustes para el logo en tabletas y pantallas medianas */
+    .navbar-logo {
+        text-align: center; /* Centrar el contenido horizontalmente */
+        margin-bottom: 1em;
+    }
+
+    .navbar-logo img {
+        max-width: 60%; /* Ajusta el tamaño del logo */
+        display: block;
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+
+    /* Ajustes para el filtro por nombre en tabletas y pantallas medianas */
+    .filtro input {
+        width: 70%; /* Ancho ajustado para el filtro */
+    }
+}
+
+/* Media Query para pantallas grandes */
+@media screen and (min-width: 1025px) {
+    /* Mantener el tamaño del logo y del filtro por nombre en pantallas grandes */
+}
+
+
+
 
 /*
 Estilos para el formulario de Testimonio 
