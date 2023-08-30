@@ -1,5 +1,4 @@
 # Veterinarias en Rio Grande
-:tw-1f408: :tw-1f415: :tw-1f407: :tw-1f424: :tw-1f404: :tw-1f40c: :tw-1f420: :tw-1f422: :tw-1f427:
 
 Aqui presentamos un sitio web estático, solo informativo, para las personas de la
 Ciudad de Rio Grande, Tierra del Fuego; En el cual se muestran los centro veterinarios para el cuidado de sus mascotas.
