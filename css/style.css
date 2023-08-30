@@ -135,7 +135,10 @@ header {
     color: black;
 }
 
-
+a.wp{
+    text-decoration: none;
+    color: #063e9d;
+}
 
 /*Para posicionar los link de las tarjetas a cada lado*/
 .izq{
@@ -270,6 +273,11 @@ footer {
 
 .footer-content p {
     margin: 0.5em;
+}
+
+.p-footer{
+    font-size: large;
+    font-weight: bold;
 }
 
 .mailto{
