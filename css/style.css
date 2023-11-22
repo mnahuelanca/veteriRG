@@ -36,6 +36,29 @@ header {
     justify-content: center;
 }
 
+.boton-facebook {
+    margin-top: 20px; /* Espacio superior para separar el botón del contenido anterior */
+}
+
+.huellitas{
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #3b5998; /* Color de Facebook */
+    color: #fff; /* Texto en color blanco */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #324c80; /* Cambia el color al pasar el mouse sobre el botón */
+}
+
+
 .veterinarias-container {
     display: flex;
     flex-wrap: wrap;
@@ -278,6 +301,7 @@ footer {
 .p-footer{
     font-size: large;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .mailto{
