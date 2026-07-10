@@ -1,464 +1,542 @@
-body {
-    font-family: Arial, sans-serif;
+/* Modern & Premium Design System for VeteriRG */
+
+:root {
+    /* Color Palette */
+    --primary-color: #f26f21; /* Warm veterinary orange */
+    --primary-hover: #d95a12;
+    --primary-light: rgba(242, 111, 33, 0.1);
+    
+    --secondary-color: #0c5ba5; /* Trustful medical blue */
+    --secondary-hover: #08447d;
+    --secondary-light: rgba(12, 91, 165, 0.1);
+    
+    --success-color: #10b981;
+    --success-light: rgba(16, 185, 129, 0.1);
+    
+    --dark-color: #1e293b;
+    --gray-color: #64748b;
+    --light-color: #f8fafc;
+    
+    /* Layout styling variables */
+    --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --border-radius-lg: 20px;
+    --border-radius-md: 12px;
+    --border-radius-sm: 8px;
+    
+    /* Glassmorphism settings */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+}
+
+/* Global resets & scroll behavior */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #DCD9D4;
-    background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
-    background-blend-mode: soft-light,screen;
-    font-family: 'PT Sans', sans-serif;
-    max-width: 100%;
 }
 
-header {
-    color: black;
-    text-align: center;
-    padding: 1em;
+body {
+    font-family: var(--font-sans);
+    color: var(--dark-color);
+    background-color: #f1f5f9;
+    /* Sleek mesh/gradient background */
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(242, 111, 33, 0.05) 0px, transparent 50%),
+        radial-gradient(at 50% 0%, rgba(12, 91, 165, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(242, 111, 33, 0.03) 0px, transparent 50%);
+    background-attachment: fixed;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/*----- BODY y TARJETAS ------*/
-.introduccion {
-    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
-    padding: 2em;
-    margin: 2em;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    align-self: center;
-    width: 80%;
-}
-
-.introduccion-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 1em;
+/* Header & Navigation */
+.header {
+    width: 100%;
+    padding: 1.5rem 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.boton-facebook {
-    margin-top: 20px; /* Espacio superior para separar el botón del contenido anterior */
-}
-
-.huellitas{
-    font-weight: bold;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: #3b5998; /* Color de Facebook */
-    color: #fff; /* Texto en color blanco */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #324c80; /* Cambia el color al pasar el mouse sobre el botón */
-}
-
-
-.veterinarias-container {
+.header-container {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 1em;
-    
+    justify-content: center;
+    align-items: center;
 }
 
-.veterinaria {
-    grid-template-columns: 8px auto 8px;
-    grid-template-rows: 8px auto 12px;  
-    border: 1px solid #ccc;
-    padding: 1em;
-    margin-bottom: 3em;
-    margin-left: 1.5em;
-    border-radius: 10px;
-    background-color: #CDDCDC;
-    background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
-    background-blend-mode: screen, overlay;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
-    z-index: 1;
+.logo-link {
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.veterinaria-fix {
-    grid-template-columns: 8px auto 8px;
-    grid-template-rows: 8px auto 12px;  
-    border: 1px solid #ccc;
-    padding: 1em;
-    margin-bottom: 4em;
-    margin-left: 1.5em;
-    border-radius: 10px;
-    background-color: #CDDCDC;
-    background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
-    background-blend-mode: screen, overlay;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
-    z-index: 1;
+.logo-link:hover {
+    transform: scale(1.05);
 }
 
-.veterinaria:hover{
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 2;
+.logo-img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
 }
 
-.veterinaria-fix:hover{
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 2;
+/* Main content wrapper */
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
-.veterinaria-zoonosis{
-    grid-template-columns: 8px auto 8px;
-    grid-template-rows: 8px auto 12px;  
-    border: 1px solid #ccc;
-    padding: 1em;
-    margin-bottom: 3em;
-    margin-left: 1.5em;
-    border-radius: 10px;
-    background-color: #96C2FE;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;  
+/* Hero Section */
+.hero-section {
+    margin-bottom: 3rem;
 }
 
-.veterinaria-zoonosis:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 4px 6px rgb(0,0,0,1);
+.hero-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.maps{
-    font-weight: bold;
-    text-decoration: none;
-    color: #0408d3;
+/* Background blob effects for premium aesthetic */
+.hero-card::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(242, 111, 33, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+    z-index: -1;
 }
 
-.domicilio{
-    font-weight: bold;
+.hero-card::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -10%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(12, 91, 165, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+    z-index: -1;
 }
 
-.telefono{
-    font-weight: bold;
+.hero-card h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #1e3a8a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.facebook{
-    font-weight: bold;
-    text-decoration: none;
-    color: #0408d3;
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    max-width: 750px;
+    margin: 0 auto 1.5rem auto;
 }
 
-.facebook:hover{
-    color: black;
+.hero-appeal {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    background: var(--secondary-light);
+    padding: 0.25rem 1rem;
+    border-radius: 50px;
 }
 
-.maps:hover{
-    color: black;
+/* Search Box Container */
+.search-box {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-a.wp{
-    text-decoration: none;
-    color: #063e9d;
-}
-
-/*Para posicionar los link de las tarjetas a cada lado*/
-.izq{
-    float: left;
-}
-
-.der{
-    float: right;
-}
-
-/*----- VETERINARIAS TURNO-----*/
-
-.veterinaria-turno {
-    background-color: #f9f9f9;
-    padding: 1em;
-    margin-top: 2em;
-    border-top: 1px solid #ccc;
-    text-align: center; /* Centrar el contenido horizontalmente */
-}
-
-.veterinaria-turno h2 {
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-.veterinaria-turno-info { 
-    border: 1px solid #ccc;
-    padding: 1em;
-    margin-bottom: 1.5%;
-    border-radius: 10px;
-    background-color: #F35C4B;
-    display: inline-block; /* Para ajustar el tamaño al contenido */
-    text-align: left; /* Alinear el contenido a la izquierda */
-
-    /* Añadir un tamaño máximo y centrar horizontalmente */
-    max-width: 100%; /* Ajusta según necesites */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Estilos para los enlaces de mapa y Facebook */
-.veterinaria-turno-info a {
+.search-label {
     display: block;
-    margin-top: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #0408d3;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    padding-left: 0.25rem;
 }
 
-.veterinaria-turno-info a:hover {
-    color: black;
-}
-
-
-.der-fix{
-    text-align: right;
-}
-
-/* ------ BARRA NAV ------*/
-.navbar {
-    padding: 1em;
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.search-input-wrapper {
+    position: relative;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
 }
 
-.navbar li {
-    margin-right: 1em;
-}
-
-.navbar a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
+.search-icon {
+    position: absolute;
+    left: 1.25rem;
+    color: var(--gray-color);
+    pointer-events: none;
     transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-    color: #f39c12;
+.search-box input {
+    width: 100%;
+    padding: 1rem 1.5rem 1rem 3.25rem;
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--dark-color);
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(226, 232, 240, 0.8);
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    outline: none;
 }
 
-.navbar-logo{
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: -3em;
-  }
-
-.navbar-logo img{
-    display: inline-block;
-    margin-right: 70px;
+.search-box input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 20px rgba(242, 111, 33, 0.15);
+    background: #ffffff;
 }
 
-
-
-/*------- FILTRO ------*/
-.filtro {
-    margin: 2em;
+.search-box input:focus + .search-icon {
+    color: var(--primary-color);
 }
 
-.filtro label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5em;
-    
+.search-box input::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
 }
 
-.filtro input {
-    width: 30%;
-    padding: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    
+/* Grid layout for Veterinarias */
+.grid-section {
+    margin-bottom: 5rem;
 }
 
-/*------ FOOTER ------*/
-footer {
-    background-color: #222;
-    color: white;
-    padding: 2em 0;
-    text-align: center;
+.veterinarias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 2rem;
 }
 
-.footer-content {
+/* Veterinary Card Design */
+.veterinaria-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: var(--border-radius-md);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease, 
+                border-color 0.4s ease;
+    overflow: hidden;
+}
+
+.veterinaria-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    border-color: rgba(242, 111, 33, 0.3);
+}
+
+/* Badges for cards */
+.card-badge {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    background: var(--primary-light);
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+}
+
+/* Card Header */
+.card-header {
+    margin-bottom: 1.25rem;
+}
+
+.card-header h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    line-height: 1.3;
+}
+
+/* Card Body */
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 1.75rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+.info-item svg {
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.icon-pin {
+    color: var(--gray-color);
+}
+
+.icon-whatsapp {
+    color: #25d366;
+}
+
+.icon-phone {
+    color: var(--secondary-color);
+}
+
+.icon-clock {
+    color: #f59e0b;
+}
+
+.info-text {
+    font-weight: 500;
+}
+
+.contact-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    border-bottom: 1px dashed transparent;
+}
+
+.contact-link:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.link-wp {
+    font-weight: 600;
+}
+
+/* Card Actions / Buttons */
+.card-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.card-actions.solo-uno {
+    grid-template-columns: 1fr;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--border-radius-sm);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+/* How to Get / Maps Button */
+.btn-maps {
+    background: var(--primary-color);
+    color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(242, 111, 33, 0.15);
+}
+
+.btn-maps:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 10px 15px -3px rgba(242, 111, 33, 0.25);
+}
+
+/* Facebook Button */
+.btn-facebook {
+    background: rgba(24, 119, 242, 0.08);
+    color: #1877f2;
+}
+
+.btn-facebook:hover {
+    background: #1877f2;
+    color: #ffffff;
+}
+
+/* Municipal Card Modifier styling */
+.veterinaria-card.municipal {
+    border: 1.5px solid rgba(12, 91, 165, 0.15);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(228, 235, 245, 0.6) 100%);
+}
+
+.veterinaria-card.municipal:hover {
+    border-color: rgba(12, 91, 165, 0.4);
+}
+
+.veterinaria-card.municipal .card-badge {
+    background: var(--secondary-light);
+    color: var(--secondary-color);
+}
+
+.veterinaria-card.municipal .btn-official {
+    background: var(--secondary-color);
+    color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(12, 91, 165, 0.15);
+}
+
+.veterinaria-card.municipal .btn-official:hover {
+    background: var(--secondary-hover);
+    box-shadow: 0 10px 15px -3px rgba(12, 91, 165, 0.25);
+}
+
+/* Schedule highlighting on Zoonosis card */
+.info-schedule {
+    background: rgba(245, 158, 11, 0.06);
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--border-radius-sm);
+    margin-top: 0.25rem;
+    border-left: 3px solid #f59e0b;
+}
+
+/* Footer Section styling */
+.footer {
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 4rem 1.5rem 3rem 1.5rem;
+    position: relative;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.footer-container {
     max-width: 800px;
     margin: 0 auto;
-}
-
-.footer-content p {
-    margin: 0.5em;
-}
-
-.p-footer{
-    font-size: large;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.mailto{
-    text-decoration: none;
-    font-weight: bold;
-    font-size: large;
-}
-
-.mailto:hover{
-    color: #f39c12;
-}
-
-.marca{
-    float: right;
-    padding-right: 1em;
-    font-weight: bold;
-    font-size: small;
-}
-
-.marca:hover{
-    color: #f39c12;
-}
-
-/* Media Query para dispositivos pequeños (como teléfonos) */
-@media screen and (max-width: 480px) {
-    /* Agrega aquí tus ajustes de estilo para pantallas pequeñas */
-    .introduccion {
-        width: 90%; /* Ejemplo de ajuste en el ancho */
-    }
-    
-    .veterinaria, .veterinaria-fix {
-        width: 90%; /* Ejemplo de ajuste en el ancho */
-        margin-left: 5%; /* Centrar horizontalmente */
-        margin-right: 5%; /* Centrar horizontalmente */
-    }
-
-    /* Otros ajustes para pantallas pequeñas */
-}
-
-/* Media Query para tabletas y pantallas medianas */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-    /* Agrega aquí tus ajustes de estilo para tabletas y pantallas medianas */
-    .introduccion {
-        width: 70%; /* Ejemplo de ajuste en el ancho */
-    }
-    
-    .veterinaria, .veterinaria-fix {
-        width: 45%; /* Ejemplo de ajuste en el ancho */
-        margin-left: 2.5%; /* Centrar horizontalmente */
-        margin-right: 2.5%; /* Centrar horizontalmente */
-    }
-
-    /* Otros ajustes para tabletas y pantallas medianas */
-}
-
-
-/* Media Query para dispositivos pequeños (como teléfonos) */
-@media screen and (max-width: 480px) {
-    /* Ajustes para el logo en pantallas pequeñas */
-    .navbar-logo {
-        text-align: center; /* Centrar el contenido horizontalmente */
-        margin-bottom: 1em;
-    }
-
-    .navbar-logo img {
-        max-width: 70%; /* Ajusta el tamaño del logo */
-        display: block;
-        margin: 0 auto; /* Centrar horizontalmente */
-    }
-
-    /* Ajustes para el filtro por nombre en pantallas pequeñas */
-    .filtro input {
-        width: 100%; /* Ancho completo para el filtro */
-    }
-}
-
-/* Media Query para tabletas y pantallas medianas */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-    /* Ajustes para el logo en tabletas y pantallas medianas */
-    .navbar-logo {
-        text-align: center; /* Centrar el contenido horizontalmente */
-        margin-bottom: 1em;
-    }
-
-    .navbar-logo img {
-        max-width: 60%; /* Ajusta el tamaño del logo */
-        display: block;
-        margin: 0 auto; /* Centrar horizontalmente */
-    }
-
-    /* Ajustes para el filtro por nombre en tabletas y pantallas medianas */
-    .filtro input {
-        width: 70%; /* Ancho ajustado para el filtro */
-    }
-}
-
-/* Media Query para pantallas grandes */
-@media screen and (min-width: 1025px) {
-    /* Mantener el tamaño del logo y del filtro por nombre en pantallas grandes */
-}
-
-
-
-
-/*
-Estilos para el formulario de Testimonio 
-.testimonio-formulario h3 {
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
-}
-
-#mostrar-formulario {
-    background-color: #f39c12;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#formulario-testimonio {
-    display: none;
-    margin-top: 1em;
-}
-
-/* Mostrar el formulario al aplicar la clase .mostrar 
-#formulario-testimonio.mostrar {
-    display: block;
-}
-
-
-/* Estilos para la sección de Testimonios 
-.testimonios {
-    padding: 2em;
-    background-color: #f9f9f9;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.testimonios h2 {
-    font-size: 1.5em;
-    margin-bottom: 1em;
+.footer-desc {
+    font-size: 1.05rem;
+    color: #e2e8f0;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
-.testimonio {
-    background-color: #CDDCDC;
-    border-radius: 10px;
-    padding: 1em;
-    margin: 1em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.btn-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--primary-color);
+    color: #ffffff;
+    padding: 0.85rem 1.75rem;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(242, 111, 33, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 3rem;
 }
 
-.testimonio-texto {
-    font-style: italic;
-    margin-bottom: 0.5em;
+.btn-email:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(242, 111, 33, 0.35);
 }
 
-.testimonio-autor {
-    font-weight: bold;
+.email-icon {
+    flex-shrink: 0;
 }
-*/
+
+/* Developer Info block */
+.developer-info {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius-md);
+    padding: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.developer-info p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #64748b;
+}
+
+.dev-name {
+    color: #e2e8f0;
+    font-weight: 600;
+}
+
+.dev-portfolio-link {
+    color: #38bdf8;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: color 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.dev-portfolio-link:hover {
+    color: #0ea5e9;
+    border-color: #0ea5e9;
+}
+
+.dev-portfolio-link svg {
+    margin-top: 1px;
+}
+
+.marca {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #475569;
+}
+
+/* Responsive adjust for screens below 400px (mobile-first fallback) */
+@media (max-width: 360px) {
+    .veterinarias-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-actions {
+        grid-template-columns: 1fr;
+    }
+}

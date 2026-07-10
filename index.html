@@ -3,277 +3,688 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veterinarias en Rio Grande</title>
+    <title>Veterinarias en Río Grande</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="img/icon_cat.png">
-
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-                <a class="navbar-logo" href="#"><img src="img/logo.png"></a>
-        </nav>
+    <header class="header">
+        <div class="header-container">
+            <a class="logo-link" href="#">
+                <img src="img/logo.png" alt="VeteriRG Logo" class="logo-img">
+            </a>
+        </div>
     </header>
-    <main>
-        <div class="introduccion-container" href="#inicio">
-            <div class="introduccion"> <!--MODIFICAR ESTE TEXTO-->
-                <h1>Centros veterinarios en Río Grande</h1>
-                <p>Este proyecto tiene como objetivo ayudar a las personas a encontrar veterinarias confiables y cercanas para el cuidado de sus mascotas.</p>
-                <p>En esta página, encontrarás todos los centros veterinarios en nuestra Ciudad, junto con su información de contacto y ubicación.</p>
-                <p>Esperamos que esta herramienta sea útil para ti y tus queridas mascotas. Si tienes alguna sugerencia o comentario, no dudes en contactarnos.</p>
-                <p class="huellitas">Tambien en nuestro Facebook "Huellitas de Amor", si tu mascota se perdio o se escapo, creamos flyers con su foto y datos para compartir en las redes sociales.</p>
-                <p>Todo esto, sin costo 🥰</p>
 
-                <div class="boton-facebook">
-                    <a href="https://www.facebook.com/profile.php?id=61551810787895" target="_blank">
-                        <button type="button">Huellitas de amor</button>
-                    </a>
-                </div>
-
-                <div class="filtro">
-                    <label for="filtro-nombre">Filtrar por nombre:</label>
-                    <input type="text" id="filtro-nombre">
-                </div>
-                <div class="veterinarias-container">
-                    
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-card">
+                <h1>Centros Veterinarios en Río Grande</h1>
+                <p class="hero-subtitle">Encuentra de forma rápida y sencilla información de contacto, horarios y ubicación de las veterinarias en nuestra ciudad para el cuidado de tus mascotas.</p>
+                <p class="hero-appeal">Toda la información reunida en un solo lugar, de acceso libre y gratuito. 🐾</p>
+                
+                <!-- Search Filter Box -->
+                <div class="search-box">
+                    <label for="filtro-nombre" class="search-label">¿Qué veterinaria estás buscando?</label>
+                    <div class="search-input-wrapper">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="filtro-nombre" placeholder="Escribe el nombre de la veterinaria...">
+                    </div>
                 </div>
             </div>
-            <div class="veterinaria-fix">
-                <h2>Centro veterinario "Don Bosco"</h2>
-                <p><span class = "domicilio">Domicilio: </span>Don Bosco 2236</p>
-                <p> <span class="telefono">Teléfono/WhatsApp:</span> <a class="wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964621276">2964-621276</a></p>
-                <a href = "https://goo.gl/maps/NJGwfJDW5miYNmAU9" target="_blank" class="maps">¿Cómo llegar?</a>
-                <div class="der">
-                    <a href="https://www.facebook.com/Centroveterinariodonbosco" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
+        </section>
 
-            <div class="veterinaria">
-                <h2>Reino Salvaje I</h2>
-                <p><span class="domicilio">Domicilio: </span> Alberdi 244</p>
-                <p><span class="telefono">Teléfono/WhatsApp: </span> <a class="wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964475527">2964-475527</a></p>
-                <p><span class="telefono">Teléfono Fijo: </span> 2964-423333</p>
-                <a href="https://goo.gl/maps/qWNWCyDXWggRPxiv7" target="_blank" class="maps">¿Cómo llegar?</a>
-                <div class="der">
-                    <a href="https://www.facebook.com/p/Veterinaria-Reino-Salvaje-100063738271771/" target="_blank" class="facebook">Facebook</a>
+        <!-- Grid of Veterinaries -->
+        <section class="grid-section">
+            <div class="veterinarias-grid" id="veterinarias-grid">
+                
+                <!-- Don Bosco -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Centro Veterinario "Don Bosco"</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Don Bosco 2236</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-whatsapp" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.949h.004c4.368 0 7.927-3.558 7.93-7.927a7.9 7.9 0 0 0-2.327-5.596ZM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.294c-.202-.1-.1.196-.54.396-.44.2-.767.15-.767.15-.314.188-.611.378-.979.57-.368.19-.778.373-1.226.543-.448.17-.89.248-1.319.22-.43-.027-.78-.174-1.05-.43-.27-.256-.42-.515-.45-.775-.03-.26.052-.485.138-.675.086-.19.268-.386.49-.586.22-.2.43-.378.618-.534.188-.156.314-.236.314-.236a.44.44 0 0 1 .44.02c.1.08.384.428.536.637.152.21.267.314.384.314.116 0 .23-.052.34-.156.11-.104.42-.486.66-.757.24-.27.426-.51.528-.686.102-.176.138-.302.138-.396 0-.094-.052-.162-.156-.214-.104-.052-.54-.26-.748-.363-.208-.104-.34-.156-.44-.156-.1 0-.174.02-.27.08-.096.06-.445.476-.59.69-.145.214-.277.34-.44.34s-.302-.052-.455-.156c-.152-.104-.61-.314-.855-.52-.244-.208-.432-.428-.528-.59-.096-.162-.1-.282 0-.378.1-.096.386-.446.528-.613.14-.168.22-.284.288-.396.068-.112.068-.202.016-.312-.052-.11-.476-1.144-.652-1.57-.176-.426-.34-.363-.464-.37-.124-.007-.268-.007-.41-.007-.14 0-.37.052-.566.26-.196.208-.75.733-.75 1.787 0 1.054.767 2.072.875 2.218.108.146 1.506 2.3 3.65 3.226 2.144.926 2.144.618 2.508.583.364-.035 1.173-.48 1.338-.943.164-.463.164-.86.115-.943-.049-.084-.18-.133-.38-.233z"/>
+                            </svg>
+                            <span class="info-text">
+                                <a class="contact-link link-wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964621276">2964-621276</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/NJGwfJDW5miYNmAU9" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/Centroveterinariodonbosco" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Reino Salvaje I -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Reino Salvaje I</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Alberdi 244</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-whatsapp" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.949h.004c4.368 0 7.927-3.558 7.93-7.927a7.9 7.9 0 0 0-2.327-5.596ZM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.294c-.202-.1-.1.196-.54.396-.44.2-.767.15-.767.15-.314.188-.611.378-.979.57-.368.19-.778.373-1.226.543-.448.17-.89.248-1.319.22-.43-.027-.78-.174-1.05-.43-.27-.256-.42-.515-.45-.775-.03-.26.052-.485.138-.675.086-.19.268-.386.49-.586.22-.2.43-.378.618-.534.188-.156.314-.236.314-.236a.44.44 0 0 1 .44.02c.1.08.384.428.536.637.152.21.267.314.384.314.116 0 .23-.052.34-.156.11-.104.42-.486.66-.757.24-.27.426-.51.528-.686.102-.176.138-.302.138-.396 0-.094-.052-.162-.156-.214-.104-.052-.54-.26-.748-.363-.208-.104-.34-.156-.44-.156-.1 0-.174.02-.27.08-.096.06-.445.476-.59.69-.145.214-.277.34-.44.34s-.302-.052-.455-.156c-.152-.104-.61-.314-.855-.52-.244-.208-.432-.428-.528-.59-.096-.162-.1-.282 0-.378.1-.096.386-.446.528-.613.14-.168.22-.284.288-.396.068-.112.068-.202.016-.312-.052-.11-.476-1.144-.652-1.57-.176-.426-.34-.363-.464-.37-.124-.007-.268-.007-.41-.007-.14 0-.37.052-.566.26-.196.208-.75.733-.75 1.787 0 1.054.767 2.072.875 2.218.108.146 1.506 2.3 3.65 3.226 2.144.926 2.144.618 2.508.583.364-.035 1.173-.48 1.338-.943.164-.463.164-.86.115-.943-.049-.084-.18-.133-.38-.233z"/>
+                            </svg>
+                            <span class="info-text">
+                                <a class="contact-link link-wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964475527">2964-475527</a>
+                            </span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span class="info-text">Fijo: 2964-423333</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/qWNWCyDXWggRPxiv7" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/Veterinaria-Reino-Salvaje-100063738271771/" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Reino Salvaje II -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Reino Salvaje II</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Tolhuin 286</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-whatsapp" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.949h.004c4.368 0 7.927-3.558 7.93-7.927a7.9 7.9 0 0 0-2.327-5.596ZM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.294c-.202-.1-.1.196-.54.396-.44.2-.767.15-.767.15-.314.188-.611.378-.979.57-.368.19-.778.373-1.226.543-.448.17-.89.248-1.319.22-.43-.027-.78-.174-1.05-.43-.27-.256-.42-.515-.45-.775-.03-.26.052-.485.138-.675.086-.19.268-.386.49-.586.22-.2.43-.378.618-.534.188-.156.314-.236.314-.236a.44.44 0 0 1 .44.02c.1.08.384.428.536.637.152.21.267.314.384.314.116 0 .23-.052.34-.156.11-.104.42-.486.66-.757.24-.27.426-.51.528-.686.102-.176.138-.302.138-.396 0-.094-.052-.162-.156-.214-.104-.052-.54-.26-.748-.363-.208-.104-.34-.156-.44-.156-.1 0-.174.02-.27.08-.096.06-.445.476-.59.69-.145.214-.277.34-.44.34s-.302-.052-.455-.156c-.152-.104-.61-.314-.855-.52-.244-.208-.432-.428-.528-.59-.096-.162-.1-.282 0-.378.1-.096.386-.446.528-.613.14-.168.22-.284.288-.396.068-.112.068-.202.016-.312-.052-.11-.476-1.144-.652-1.57-.176-.426-.34-.363-.464-.37-.124-.007-.268-.007-.41-.007-.14 0-.37.052-.566.26-.196.208-.75.733-.75 1.787 0 1.054.767 2.072.875 2.218.108.146 1.506 2.3 3.65 3.226 2.144.926 2.144.618 2.508.583.364-.035 1.173-.48 1.338-.943.164-.463.164-.86.115-.943-.049-.084-.18-.133-.38-.233z"/>
+                            </svg>
+                            <span class="info-text">
+                                <a class="contact-link link-wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964555882">2964-555882</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/N7A79Q1WnsqW2E198" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/Veterinaria-Reino-Salvaje-100063738271771/" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hocicos -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Hocicos</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Rosales 629</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span class="info-text">Fijo: 2964-433306</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/WTdJE2U45c1QtZEL7" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/pages/Hocicos/317659482353292" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vet home -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Vet Home</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Echelaine 95</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/RVV4kXu5pjy1D1sFA" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/vet.home.39904" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Alfa -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Alfa</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">25 de Mayo 1013</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-whatsapp" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.949h.004c4.368 0 7.927-3.558 7.93-7.927a7.9 7.9 0 0 0-2.327-5.596ZM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.294c-.202-.1-.1.196-.54.396-.44.2-.767.15-.767.15-.314.188-.611.378-.979.57-.368.19-.778.373-1.226.543-.448.17-.89.248-1.319.22-.43-.027-.78-.174-1.05-.43-.27-.256-.42-.515-.45-.775-.03-.26.052-.485.138-.675.086-.19.268-.386.49-.586.22-.2.43-.378.618-.534.188-.156.314-.236.314-.236a.44.44 0 0 1 .44.02c.1.08.384.428.536.637.152.21.267.314.384.314.116 0 .23-.052.34-.156.11-.104.42-.486.66-.757.24-.27.426-.51.528-.686.102-.176.138-.302.138-.396 0-.094-.052-.162-.156-.214-.104-.052-.54-.26-.748-.363-.208-.104-.34-.156-.44-.156-.1 0-.174.02-.27.08-.096.06-.445.476-.59.69-.145.214-.277.34-.44.34s-.302-.052-.455-.156c-.152-.104-.61-.314-.855-.52-.244-.208-.432-.428-.528-.59-.096-.162-.1-.282 0-.378.1-.096.386-.446.528-.613.14-.168.22-.284.288-.396.068-.112.068-.202.016-.312-.052-.11-.476-1.144-.652-1.57-.176-.426-.34-.363-.464-.37-.124-.007-.268-.007-.41-.007-.14 0-.37.052-.566.26-.196.208-.75.733-.75 1.787 0 1.054.767 2.072.875 2.218.108.146 1.506 2.3 3.65 3.226 2.144.926 2.144.618 2.508.583.364-.035 1.173-.48 1.338-.943.164-.463.164-.86.115-.943-.049-.084-.18-.133-.38-.233z"/>
+                            </svg>
+                            <span class="info-text">
+                                <a class="contact-link link-wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964697521">2964-697521</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/iNDR4FMrZeR1fSuEA" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100063564459415" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Artemis -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Artemis</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Cabo Peña 747</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span class="info-text">Teléfono: 2964-504580</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/onaDFEzAdSAoEuUL7" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/ArtemisVeterinaria" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Austral Aldo Sanchez -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Austral Aldo Sanchez</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Tolhuin 392</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-whatsapp" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.949h.004c4.368 0 7.927-3.558 7.93-7.927a7.9 7.9 0 0 0-2.327-5.596ZM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.294c-.202-.1-.1.196-.54.396-.44.2-.767.15-.767.15-.314.188-.611.378-.979.57-.368.19-.778.373-1.226.543-.448.17-.89.248-1.319.22-.43-.027-.78-.174-1.05-.43-.27-.256-.42-.515-.45-.775-.03-.26.052-.485.138-.675.086-.19.268-.386.49-.586.22-.2.43-.378.618-.534.188-.156.314-.236.314-.236a.44.44 0 0 1 .44.02c.1.08.384.428.536.637.152.21.267.314.384.314.116 0 .23-.052.34-.156.11-.104.42-.486.66-.757.24-.27.426-.51.528-.686.102-.176.138-.302.138-.396 0-.094-.052-.162-.156-.214-.104-.052-.54-.26-.748-.363-.208-.104-.34-.156-.44-.156-.1 0-.174.02-.27.08-.096.06-.445.476-.59.69-.145.214-.277.34-.44.34s-.302-.052-.455-.156c-.152-.104-.61-.314-.855-.52-.244-.208-.432-.428-.528-.59-.096-.162-.1-.282 0-.378.1-.096.386-.446.528-.613.14-.168.22-.284.288-.396.068-.112.068-.202.016-.312-.052-.11-.476-1.144-.652-1.57-.176-.426-.34-.363-.464-.37-.124-.007-.268-.007-.41-.007-.14 0-.37.052-.566.26-.196.208-.75.733-.75 1.787 0 1.054.767 2.072.875 2.218.108.146 1.506 2.3 3.65 3.226 2.144.926 2.144.618 2.508.583.364-.035 1.173-.48 1.338-.943.164-.463.164-.86.115-.943-.049-.084-.18-.133-.38-.233z"/>
+                            </svg>
+                            <span class="info-text">
+                                <a class="contact-link link-wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964480885">2964-480885</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/F4sSh3NDwm3wkgiw6" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100087485462469" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Veterinaria del Sur -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Veterinaria del Sur</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Alberdi 921</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-whatsapp" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.949h.004c4.368 0 7.927-3.558 7.93-7.927a7.9 7.9 0 0 0-2.327-5.596ZM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.294c-.202-.1-.1.196-.54.396-.44.2-.767.15-.767.15-.314.188-.611.378-.979.57-.368.19-.778.373-1.226.543-.448.17-.89.248-1.319.22-.43-.027-.78-.174-1.05-.43-.27-.256-.42-.515-.45-.775-.03-.26.052-.485.138-.675.086-.19.268-.386.49-.586.22-.2.43-.378.618-.534.188-.156.314-.236.314-.236a.44.44 0 0 1 .44.02c.1.08.384.428.536.637.152.21.267.314.384.314.116 0 .23-.052.34-.156.11-.104.42-.486.66-.757.24-.27.426-.51.528-.686.102-.176.138-.302.138-.396 0-.094-.052-.162-.156-.214-.104-.052-.54-.26-.748-.363-.208-.104-.34-.156-.44-.156-.1 0-.174.02-.27.08-.096.06-.445.476-.59.69-.145.214-.277.34-.44.34s-.302-.052-.455-.156c-.152-.104-.61-.314-.855-.52-.244-.208-.432-.428-.528-.59-.096-.162-.1-.282 0-.378.1-.096.386-.446.528-.613.14-.168.22-.284.288-.396.068-.112.068-.202.016-.312-.052-.11-.476-1.144-.652-1.57-.176-.426-.34-.363-.464-.37-.124-.007-.268-.007-.41-.007-.14 0-.37.052-.566.26-.196.208-.75.733-.75 1.787 0 1.054.767 2.072.875 2.218.108.146 1.506 2.3 3.65 3.226 2.144.926 2.144.618 2.508.583.364-.035 1.173-.48 1.338-.943.164-.463.164-.86.115-.943-.049-.084-.18-.133-.38-.233z"/>
+                            </svg>
+                            <span class="info-text">
+                                <a class="contact-link link-wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964566440">2964-566440</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-actions solo-uno">
+                        <a href="https://goo.gl/maps/pVkcVxNmzEeDNKgY6" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Veterinaria Leiva -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Veterinaria Leiva</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Viedma 295</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-whatsapp" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.949h.004c4.368 0 7.927-3.558 7.93-7.927a7.9 7.9 0 0 0-2.327-5.596ZM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.294c-.202-.1-.1.196-.54.396-.44.2-.767.15-.767.15-.314.188-.611.378-.979.57-.368.19-.778.373-1.226.543-.448.17-.89.248-1.319.22-.43-.027-.78-.174-1.05-.43-.27-.256-.42-.515-.45-.775-.03-.26.052-.485.138-.675.086-.19.268-.386.49-.586.22-.2.43-.378.618-.534.188-.156.314-.236.314-.236a.44.44 0 0 1 .44.02c.1.08.384.428.536.637.152.21.267.314.384.314.116 0 .23-.052.34-.156.11-.104.42-.486.66-.757.24-.27.426-.51.528-.686.102-.176.138-.302.138-.396 0-.094-.052-.162-.156-.214-.104-.052-.54-.26-.748-.363-.208-.104-.34-.156-.44-.156-.1 0-.174.02-.27.08-.096.06-.445.476-.59.69-.145.214-.277.34-.44.34s-.302-.052-.455-.156c-.152-.104-.61-.314-.855-.52-.244-.208-.432-.428-.528-.59-.096-.162-.1-.282 0-.378.1-.096.386-.446.528-.613.14-.168.22-.284.288-.396.068-.112.068-.202.016-.312-.052-.11-.476-1.144-.652-1.57-.176-.426-.34-.363-.464-.37-.124-.007-.268-.007-.41-.007-.14 0-.37.052-.566.26-.196.208-.75.733-.75 1.787 0 1.054.767 2.072.875 2.218.108.146 1.506 2.3 3.65 3.226 2.144.926 2.144.618 2.508.583.364-.035 1.173-.48 1.338-.943.164-.463.164-.86.115-.943-.049-.084-.18-.133-.38-.233z"/>
+                            </svg>
+                            <span class="info-text">
+                                <a class="contact-link link-wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964534786">2964-534786</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/PqVtHWb7m6D8tMma8" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100064183145164" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- San Francisco de Asis -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>San Francisco de Asís</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">25 de Mayo 1385</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-whatsapp" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.949h.004c4.368 0 7.927-3.558 7.93-7.927a7.9 7.9 0 0 0-2.327-5.596ZM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.294c-.202-.1-.1.196-.54.396-.44.2-.767.15-.767.15-.314.188-.611.378-.979.57-.368.19-.778.373-1.226.543-.448.17-.89.248-1.319.22-.43-.027-.78-.174-1.05-.43-.27-.256-.42-.515-.45-.775-.03-.26.052-.485.138-.675.086-.19.268-.386.49-.586.22-.2.43-.378.618-.534.188-.156.314-.236.314-.236a.44.44 0 0 1 .44.02c.1.08.384.428.536.637.152.21.267.314.384.314.116 0 .23-.052.34-.156.11-.104.42-.486.66-.757.24-.27.426-.51.528-.686.102-.176.138-.302.138-.396 0-.094-.052-.162-.156-.214-.104-.052-.54-.26-.748-.363-.208-.104-.34-.156-.44-.156-.1 0-.174.02-.27.08-.096.06-.445.476-.59.69-.145.214-.277.34-.44.34s-.302-.052-.455-.156c-.152-.104-.61-.314-.855-.52-.244-.208-.432-.428-.528-.59-.096-.162-.1-.282 0-.378.1-.096.386-.446.528-.613.14-.168.22-.284.288-.396.068-.112.068-.202.016-.312-.052-.11-.476-1.144-.652-1.57-.176-.426-.34-.363-.464-.37-.124-.007-.268-.007-.41-.007-.14 0-.37.052-.566.26-.196.208-.75.733-.75 1.787 0 1.054.767 2.072.875 2.218.108.146 1.506 2.3 3.65 3.226 2.144.926 2.144.618 2.508.583.364-.035 1.173-.48 1.338-.943.164-.463.164-.86.115-.943-.049-.084-.18-.133-.38-.233z"/>
+                            </svg>
+                            <span class="info-text">
+                                <a class="contact-link link-wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964458274">2964-458274</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/nmPnpa7GNHTTajZE6" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/veterinaria.sfa" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Veterina SKA -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Veterinaria SKA</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Obligado 1245</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span class="info-text">Fijo: 2964-425634</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://www.facebook.com/veterinariaskatiendademascotas" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/veterinariaskatiendademascotas" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicios Jeremias Sarmiento -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Servicios Jeremías Sarmiento</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Ushuaia 510</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span class="info-text">Teléfono: 2964-620827</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/2C2HyrzMrcgzi5a9A" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100046925094068" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Río Grande Aldo Sanchez -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Río Grande Aldo Sanchez</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Pellegrini 190</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-whatsapp" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.949h.004c4.368 0 7.927-3.558 7.93-7.927a7.9 7.9 0 0 0-2.327-5.596ZM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.294c-.202-.1-.1.196-.54.396-.44.2-.767.15-.767.15-.314.188-.611.378-.979.57-.368.19-.778.373-1.226.543-.448.17-.89.248-1.319.22-.43-.027-.78-.174-1.05-.43-.27-.256-.42-.515-.45-.775-.03-.26.052-.485.138-.675.086-.19.268-.386.49-.586.22-.2.43-.378.618-.534.188-.156.314-.236.314-.236a.44.44 0 0 1 .44.02c.1.08.384.428.536.637.152.21.267.314.384.314.116 0 .23-.052.34-.156.11-.104.42-.486.66-.757.24-.27.426-.51.528-.686.102-.176.138-.302.138-.396 0-.094-.052-.162-.156-.214-.104-.052-.54-.26-.748-.363-.208-.104-.34-.156-.44-.156-.1 0-.174.02-.27.08-.096.06-.445.476-.59.69-.145.214-.277.34-.44.34s-.302-.052-.455-.156c-.152-.104-.61-.314-.855-.52-.244-.208-.432-.428-.528-.59-.096-.162-.1-.282 0-.378.1-.096.386-.446.528-.613.14-.168.22-.284.288-.396.068-.112.068-.202.016-.312-.052-.11-.476-1.144-.652-1.57-.176-.426-.34-.363-.464-.37-.124-.007-.268-.007-.41-.007-.14 0-.37.052-.566.26-.196.208-.75.733-.75 1.787 0 1.054.767 2.072.875 2.218.108.146 1.506 2.3 3.65 3.226 2.144.926 2.144.618 2.508.583.364-.035 1.173-.48 1.338-.943.164-.463.164-.86.115-.943-.049-.084-.18-.133-.38-.233z"/>
+                            </svg>
+                            <span class="info-text">
+                                <a class="contact-link link-wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964624540">2964-624540</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/uUFcu6k7oMwvRVRGA" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100087485462469" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Veterinary Medical Center -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Veterinary Medical Center</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Venezuela 373</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-whatsapp" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.949h.004c4.368 0 7.927-3.558 7.93-7.927a7.9 7.9 0 0 0-2.327-5.596ZM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.294c-.202-.1-.1.196-.54.396-.44.2-.767.15-.767.15-.314.188-.611.378-.979.57-.368.19-.778.373-1.226.543-.448.17-.89.248-1.319.22-.43-.027-.78-.174-1.05-.43-.27-.256-.42-.515-.45-.775-.03-.26.052-.485.138-.675.086-.19.268-.386.49-.586.22-.2.43-.378.618-.534.188-.156.314-.236.314-.236a.44.44 0 0 1 .44.02c.1.08.384.428.536.637.152.21.267.314.384.314.116 0 .23-.052.34-.156.11-.104.42-.486.66-.757.24-.27.426-.51.528-.686.102-.176.138-.302.138-.396 0-.094-.052-.162-.156-.214-.104-.052-.54-.26-.748-.363-.208-.104-.34-.156-.44-.156-.1 0-.174.02-.27.08-.096.06-.445.476-.59.69-.145.214-.277.34-.44.34s-.302-.052-.455-.156c-.152-.104-.61-.314-.855-.52-.244-.208-.432-.428-.528-.59-.096-.162-.1-.282 0-.378.1-.096.386-.446.528-.613.14-.168.22-.284.288-.396.068-.112.068-.202.016-.312-.052-.11-.476-1.144-.652-1.57-.176-.426-.34-.363-.464-.37-.124-.007-.268-.007-.41-.007-.14 0-.37.052-.566.26-.196.208-.75.733-.75 1.787 0 1.054.767 2.072.875 2.218.108.146 1.506 2.3 3.65 3.226 2.144.926 2.144.618 2.508.583.364-.035 1.173-.48 1.338-.943.164-.463.164-.86.115-.943-.049-.084-.18-.133-.38-.233z"/>
+                            </svg>
+                            <span class="info-text">
+                                <a class="contact-link link-wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964603021">2964-603021</a>
+                            </span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span class="info-text">Fijo: 2964-302726</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://maps.app.goo.gl/SgBcM5xNX4ScmYXQ6" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/VMC.TDF?mibextid=LQQJ4d" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Centro Integral Veterinario -->
+                <div class="veterinaria-card">
+                    <div class="card-badge">Comercial</div>
+                    <div class="card-header">
+                        <h2>Centro Integral Veterinario</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">Bilbao 479</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-whatsapp" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.949h.004c4.368 0 7.927-3.558 7.93-7.927a7.9 7.9 0 0 0-2.327-5.596ZM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.294c-.202-.1-.1.196-.54.396-.44.2-.767.15-.767.15-.314.188-.611.378-.979.57-.368.19-.778.373-1.226.543-.448.17-.89.248-1.319.22-.43-.027-.78-.174-1.05-.43-.27-.256-.42-.515-.45-.775-.03-.26.052-.485.138-.675.086-.19.268-.386.49-.586.22-.2.43-.378.618-.534.188-.156.314-.236.314-.236a.44.44 0 0 1 .44.02c.1.08.384.428.536.637.152.21.267.314.384.314.116 0 .23-.052.34-.156.11-.104.42-.486.66-.757.24-.27.426-.51.528-.686.102-.176.138-.302.138-.396 0-.094-.052-.162-.156-.214-.104-.052-.54-.26-.748-.363-.208-.104-.34-.156-.44-.156-.1 0-.174.02-.27.08-.096.06-.445.476-.59.69-.145.214-.277.34-.44.34s-.302-.052-.455-.156c-.152-.104-.61-.314-.855-.52-.244-.208-.432-.428-.528-.59-.096-.162-.1-.282 0-.378.1-.096.386-.446.528-.613.14-.168.22-.284.288-.396.068-.112.068-.202.016-.312-.052-.11-.476-1.144-.652-1.57-.176-.426-.34-.363-.464-.37-.124-.007-.268-.007-.41-.007-.14 0-.37.052-.566.26-.196.208-.75.733-.75 1.787 0 1.054.767 2.072.875 2.218.108.146 1.506 2.3 3.65 3.226 2.144.926 2.144.618 2.508.583.364-.035 1.173-.48 1.338-.943.164-.463.164-.86.115-.943-.049-.084-.18-.133-.38-.233z"/>
+                            </svg>
+                            <span class="info-text">
+                                <a class="contact-link link-wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964698649">2964-698649</a> / 
+                                <a class="contact-link link-wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964613359">613359</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/7duyfcQxhSV8Jy8c6" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.facebook.com/civrg" target="_blank" class="btn btn-facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Zoonosis Municipal -->
+                <div class="veterinaria-card municipal">
+                    <div class="card-badge">Público / Municipal</div>
+                    <div class="card-header">
+                        <h2>Zoonosis Municipal</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="info-text">25 de Mayo 2937</span>
+                        </div>
+                        <div class="info-item">
+                            <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span class="info-text">Teléfono: 2964-436265</span>
+                        </div>
+                        <div class="info-item info-schedule">
+                            <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span class="info-text">Atención: Lunes a Viernes de 8 a 16 hs</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://goo.gl/maps/DkFMm5V7RMuMDt7V9" target="_blank" class="btn btn-maps">
+                            <span>¿Cómo llegar?</span>
+                        </a>
+                        <a href="https://www.riogrande.gob.ar/zoonosis/" target="_blank" class="btn btn-official">
+                            <svg class="icon icon-globe" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                            <span>Sitio Oficial</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-desc">¿Tienes preguntas, comentarios o necesitas corregir o agregar algún dato a este sitio web? Contáctanos directamente:</p>
+            <a href="mailto:maxinahuelanca@gmail.com" class="btn-email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="email-icon">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                maxinahuelanca@gmail.com
+            </a>
+            
+            <div class="developer-info">
+                <p>Desarrollado por <span class="dev-name">Maximiliano Nahuelanca</span></p>
+                <a href="https://mnahuelanca.vercel.app/" target="_blank" class="dev-portfolio-link">
+                    <span>Visita mi portafolio web</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="external-icon">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </a>
             </div>
             
-            <div class="veterinaria">
-                <h2>Reino Salvaje II</h2>
-                <p><span class="domicilio">Domicilio: </span> Tolhuin 286</p>
-                <p><span class="telefono">Telefono/WhatsApp: </span><a class="wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964555882">2964-555882</a></p>
-                <a href="https://goo.gl/maps/N7A79Q1WnsqW2E198" target="_blank" class="maps">¿Cómo llegar?</a>
-                <div class="der">
-                    <a href="https://www.facebook.com/p/Veterinaria-Reino-Salvaje-100063738271771/" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
-
-            <div class="veterinaria">
-                <h2>Hocicos</h2>
-                <p><span class="domicilio">Domicilio: </span>Rosales 629</p>
-                <p><span class="telefono">Teléfono Fijo: </span> 2964-433306</p>
-                <a href="https://goo.gl/maps/WTdJE2U45c1QtZEL7" target="_blank" class="maps">¿Cómo llegar?</a>
-                <div class="der">
-                    <a href="https://www.facebook.com/pages/Hocicos/317659482353292" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
-
-            <div class="veterinaria">
-                <h2>Vet home</h2>
-                <p><span class="domicilio">Domicilio: </span>Echelaine 95</p>
-                <!-- <p><span class="telefono">Teléfono: </span> 2964-####</p>
-                    NO TENEMOS NUMERO DE CONTACTO -->
-                <a href="https://goo.gl/maps/RVV4kXu5pjy1D1sFA" target="_blank" class="maps">¿Cómo llegar?</a>
-                <br>
-                <br>
-                <div class="der-fix"> <!-- CLASE NO DEFINIDA. VER UBICACION-->
-                    <a href="https://www.facebook.com/vet.home.39904" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
-
-            <div class="veterinaria">
-                <h2>Alfa</h2>
-                <p><span class="domicilio">Domicilio: </span>25 de mayo 1013</p>
-                <p><span class="telefono">Teléfono/WhatsApp: </span><a class="wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964697521">2964-697521</a></p>
-                <a href="https://goo.gl/maps/iNDR4FMrZeR1fSuEA" target="_blank" class="maps">¿Cómo llegar?</a>
-                <div class="der">
-                    <a href="https://www.facebook.com/profile.php?id=100063564459415" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
-
-            <div class="veterinaria">
-                <h2>Artemis</h2>
-                <p><span class="domicilio">Domicilio: </span> Cabo peña 747</p>
-                <p><span class="telefono">Teléfono: </span> 2964-504580</p>
-                <a href="https://goo.gl/maps/onaDFEzAdSAoEuUL7" target="_blank" class="maps">¿Cómo llegar?</a>
-                <div class="der">
-                    <a href="https://www.facebook.com/ArtemisVeterinaria" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
-
-            <div class="veterinaria">
-                <h2>Austral Aldo Sanchez</h2>
-                <p><span class="domicilio">Domicilio: </span> Tolhuin 392</p>
-                <p><span class="telefono">Teléfono/WhatsApp:</span> <a class="wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964480885">2964-480885</a></p>
-                <a href="https://goo.gl/maps/F4sSh3NDwm3wkgiw6" target="_blank" class="maps">¿Cómo llegar?</a>
-                <div class="der">
-                    <a href="https://www.facebook.com/profile.php?id=100087485462469" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
-
-            <div class="veterinaria">
-                <h2>Veterinaria del Sur</h2>
-                <p><span class="domicilio">Domicilio: </span> Alberdi 921</p>
-                <p><span class="telefono">Teléfono/Whatsapp: </span> <a class="wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964566440">2964-566440</a></p>
-                <a href="https://goo.gl/maps/pVkcVxNmzEeDNKgY6" target="_blank" class="maps">¿Cómo llegar?</a>
-                <!-- <a href="" target="_blank" class="facebook">Facebook</a>  NO SE ENCONTRO EL FACEBOOK. NO SABEMOS SI ESTA EN FUNCIONAMIENTO--> 
-            </div>
-
-            <div class="veterinaria">
-                <h2>Veterinaria Leiva</h2>
-                <p><span class="domicilio">Domicilio: </span> Viedma 295</p>
-                <p><span class="telefono">Teléfono/WhatsApp: </span>  <a class="wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964534786">2964-534786</a></p>
-                <a href="https://goo.gl/maps/PqVtHWb7m6D8tMma8" target="_blank" class="maps">¿Cómo llegar?</a>
-                <div class="der">
-                    <a href="https://www.facebook.com/profile.php?id=100064183145164" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
-
-            <div class="veterinaria">
-                <h2>San Francisco de Asis</h2>
-                <p><span class="domicilio">Domicilio: </span> 25 de mayo 1385</p>
-                <p><span class="telefono">Teléfono/WhatsApp: </span> <a class="wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964458274">2964-458274</a></p>
-                <a href="https://goo.gl/maps/nmPnpa7GNHTTajZE6" target="_blank" class="maps">¿Cómo llegar?</a>
-                <div class="der">
-                    <a href="https://www.facebook.com/veterinaria.sfa" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
-
-            <div class="veterinaria">
-                <h2>Veterina SKA</h2>
-                <p><span class="domicilio">Domicilio: </span> Obligado 1245</p>
-                <p><span class="telefono">Teléfono Fijo: </span> 2964-425634</p>
-                <a href="https://www.facebook.com/veterinariaskatiendademascotas" target="_blank" class="maps">¿Cómo llegar?</a>
-                <div class="der">
-                    <a href="https://www.facebook.com/veterinariaskatiendademascotas" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
-
-            <div class="veterinaria">
-                <h2>Servicios Jeremias Sarmiento</h2>
-                <p><span class="domicilio">Domicilio: </span> Ushuaia 510</p>
-                <p><span class="telefono">Teléfono: </span> 2964-620827</p>
-                <a href="https://goo.gl/maps/2C2HyrzMrcgzi5a9A" target="_blank" class="maps">¿Cómo llegar?</a>
-                <div class="der">
-                    <a href="https://www.facebook.com/profile.php?id=100046925094068" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
-
-            <div class="veterinaria">
-                <h2>Río Grande Aldo Sanchez</h2>
-                <p><span class="domicilio">Domicilio: </span> Pelegrini 190</p>
-                <p><span class="telefono">Teléfono/WhatsApp: </span><a class="wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964624540">2964-624540</a></p>
-                <a href="https://goo.gl/maps/uUFcu6k7oMwvRVRGA" target="_blank" class="maps">¿Cómo llegar?</a>
-                <div class="der">
-                    <a href="https://www.facebook.com/profile.php?id=100087485462469" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
-
-            <div class="veterinaria">
-                <h2>Veterinary Medical Center</h2>
-                <p><span class="domicilio">Domicilio: </span> Venezuela 373</p>
-                <p><span class="telefono">WhatsApp: </span><a class="wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964603021">2964-603021</a></p>
-                <p><span class="telefono">Teléfono Fijo: </span> 2964-302726</p>
-                <a href="https://maps.app.goo.gl/SgBcM5xNX4ScmYXQ6" target="_blank" class="maps">¿Cómo llegar?</a>
-                <div class="der">
-                    <a href="https://www.facebook.com/VMC.TDF?mibextid=LQQJ4d" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
-
-
-            <div class="veterinaria">
-                <h2>Centro Integral Veterinario</h2>
-                <p><span class="domicilio">Domicilio: </span> Bilbao 479</p>
-                <p><span class="telefono">Teléfono/WhatsApp 1: </span> <a class="wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964698649">2964-698649</a></p>
-                <p><span class="telefono">Teléfono/WhatsApp 2: </span> <a class="wp" target="_blank" href="https://api.whatsapp.com/send?phone=5492964613359">2964-613359</a></p>
-                <div class="izq">
-                    <a href="https://goo.gl/maps/7duyfcQxhSV8Jy8c6" target="_blank" class="maps">¿Cómo llegar?</a>
-                </div>
-                <div class="der">
-                    <a href="https://www.facebook.com/civrg" target="_blank" class="facebook">Facebook</a>
-                </div>
-            </div>
-
-            <div class="veterinaria-zoonosis">
-                <h2>Zoonozis Municipal</h2>
-                <p><span class="domicilio">Domicilio: </span> 25 de mayo 2937</p>
-                <p><span class="telefono">Teléfono: </span> 2964-436265</p>
-                <p><span class="telefono">Atencion: </span> Lunes a Viernes de 8 a 16hs</p>
-                <div class="izq">
-                    <a href="https://goo.gl/maps/DkFMm5V7RMuMDt7V9" target="_blank" class="maps">¿Cómo llegar?</a>
-                </div>
-                <div class="der">
-                    <a href="https://www.riogrande.gob.ar/zoonosis/" target="_blank" class="facebook">Pagina Oficial</a>
-                </div>
-            </div>
+            <span class="marca">Hecho con 🧡 para Río Grande</span>
         </div>
-    
-        <!-- <section class="testimonios">
-            <h2>Comentarios y Testimonios</h2>
-            <div class="testimonio-formulario">
-                <h3>Envía tu Testimonio</h3>
-                <button id="mostrar-formulario">Enviar Testimonio</button>
-                <form id="formulario-testimonio" class="oculto">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-        
-                    <label for="veterinaria">Veterinaria:</label>
-                    <input type="text" id="veterinaria" name="veterinaria" required>
-        
-                    <label for="testimonio">Testimonio:</label>
-                    <textarea id="testimonio" name="testimonio" required></textarea>
-        
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-             Agrega los testimonios existentes aquí 
-        </section>-->
-        
-
-    <section class="veterinaria-turno">
-        <h2>Proximamente... 🙏 Veterinaria de Turno</h2>
-        <div class="veterinaria-turno-info">
-            <h3>Nombre de la Veterinaria</h3>
-            <p><span class="domicilio"> Dirección: </span> ...  </p>
-            <p><span class="telefono">Teléfono: </span> ...   </p>
-            <p><span class="telefono">Atencion: </span> ...   </p>
-                <div>
-                    <a href="#" target="_blank" class="maps">¿Cómo llegar?</a>
-                </div>
-                <br>
-                <div>
-                    <a href="#" target="_blank" class="facebook">Facebook</a>
-                </div>
-        </div>
-    </section>
-</main>
-
-    <footer>
-        <div class="footer-content">
-            <p class="p-footer">Si quieres ayudarnos a mejorar nuestra web, tienes preguntas, comentarios o quieres corregir y/o agregar datos, puedes contactarnos en:</p>
-            <a href="https://api.whatsapp.com/send/?phone=5492964505174" class = "mailto" target="_blank">¡Escribinos!</a><br>
-        </div>
-        <span class="marca">Hecho por M&M 🧡</span>
     </footer>
 
-
     <script src="js/filter.js"></script>
-    <!-- <script src="/js/comentarios.js"></script> -->
-
 </body>
 </html>
-
